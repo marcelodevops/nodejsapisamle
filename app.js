@@ -1,12 +1,7 @@
 const express = require('express')
 const app = express()
 app.use(express.json())
-const courses = [
-    { id: '1', name: 'course1' },
-    { id: '2', name: 'course2' },
-    { id: '3', name: 'course3' }
-
-]
+const courses = require('./data.json')
 
 app.get('/', (req, res) => {
     res.send('Hi there!')
